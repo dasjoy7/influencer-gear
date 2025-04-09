@@ -7,13 +7,14 @@
 }
 
 .header {
-    margin: 80px 110px;
-    /* border: 2px solid tomato; */
+    /* margin: 80px 110px; */
+    padding: 20px 40px;
+    border: 2px solid tomato;
 }
 
 /* Navbar styles */
 .navbar {
-    /* border: 2px solid rgb(133, 153, 51); */
+    border: 2px solid rgb(153, 51, 51);
     display: flex;
     justify-content: space-between;
 }
@@ -112,14 +113,69 @@
 
 
 
+/* Items design */
+.item {
+    border: 2px solid rgb(230, 255, 71);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+}
+
+.item-image {
+    border-radius: 5px;
+    width: 100%;
+}
+
+.collection-title {
+    text-align: center;
+    color: rgba(58, 58, 58, 1);
+    font-weight: 600;
+    font-size: 1.75rem;
+    margin-bottom: 50px;
+}
+
+.item-title {
+    color: rgba(24, 25, 31, 1);
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.item-cost {
+    color: rgba(0, 0, 0, 0.87);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.item-description {
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: rgba(120, 120, 133, 1);
+    width: 70%;
+}
+
+.items-container {
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 80%;
+    margin: 0 auto;
+}
+.collection{
+    border: 2px solid rgb(10, 18, 255);
+}
+
 
 /* small device */
 @media screen and (max-width: 576px) {
-    .f-nav{
+    .f-nav {
         display: flex;
         align-items: center;
         width: 100%;
     }
+
     .header {
         margin: 35px 19px 35px 19px;
         /* border: 2px solid tomato; */
@@ -179,21 +235,22 @@
         gap: 17px;
         padding: 10px;
     }
-    .company-imm{
+
+    .company-imm {
         width: 20%;
     }
 }
 
 /* Medium device */
-@media screen and (min-width: 576px) and (max-width: 992px) {
-    .f-nav{
+@media screen and (min-width: 577px) and (max-width: 992px) {
+    .f-nav {
         display: flex;
         align-items: center;
         width: 100%;
     }
+
     .header {
         margin: 35px 30px 35px 30px;
-        /* border: 2px solid tomato; */
     }
 
     .nav-links {
@@ -245,8 +302,33 @@
         gap: 13px;
         padding: 10px;
     }
-    .company-imm{
+
+    .company-imm {
         width: 10%;
     }
-}
+
+    .items-container {
+        grid-template-columns: repeat(2, 45%);
+        align-items: center;
+        gap: 30px;
+    }
+    .item-image {
+        width: 100%;
+    }
+    .item {
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.3);
+    }
+    .item-title {
+        font-size: 1.2rem;
+    }
     
+    .item-cost {
+        font-size: 0.8rem;
+    }
+    
+    .item-description {
+        font-size: 0.7rem;
+    }
+}
